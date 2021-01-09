@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('https://design-milk.com/images/2020/03/DM-Wallpaper-2004-2560x1440-1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.banner {
+  background-color: rgb(255, 238, 217);
+  width: 50%;
+  height: 15rem;
+  margin: 12rem auto;
+  text-align: center;
+  border-radius: 0.8rem;
+  color: #192a42;
+  position: relative;
+}
+.banner h1 {
+  padding: 3rem 0;
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+}
+.modal-button {
+  font-size: 0.9rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+  border: 1px solid #b6492e;
+  background-color: #b6492e;
+  color: wheat;
+  cursor: pointer;
+}
+.modal-button:focus {
+  outline: none;
+}
+.modal-button:hover {
+  background: none;
+  color: #b6492e;
+  transition: 400ms linear all;
+}
+.modal-overlay {
+  background-color: rgb(255, 238, 217);
+  position: absolute;
+  top: 2rem;
+  height: 75%;
+  width: 100%;
+  text-align: center;
+  border-radius: 0.8rem;
+  color: #192a42;
+  transition: var(--transition);
+  visibility: hidden;
+}
+.modal-overlay h3 {
+  padding: 4rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+}
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #8a3620;
+  cursor: pointer;
+}
+.close-btn:focus {
+  outline: none;
+}
+.close-btn:hover {
+  font-size: 2rem;
+  color: #8a3520a6;
+}
+
+@media only screen and (max-width: 676px) {
+  .banner {
+    width: 85%;
+  }
+}
