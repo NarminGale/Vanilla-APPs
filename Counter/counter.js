@@ -7,17 +7,17 @@ const reset = document.querySelector('.reset')
 const increase = document.querySelector('.increase')
 
 // events
-decrease.addEventListener('click', function (e) {
+decrease.addEventListener('click', function () {
   count--
   value.innerText = count
   checkValue(value)
 })
-reset.addEventListener('click', function (e) {
+reset.addEventListener('click', function () {
   count = 0
   value.innerText = count
   checkValue(value)
 })
-increase.addEventListener('click', function (e) {
+increase.addEventListener('click', function () {
   count++
   value.innerText = count
   checkValue(value)
