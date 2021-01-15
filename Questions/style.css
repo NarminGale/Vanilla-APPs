@@ -13,6 +13,9 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
 } */
+.questions {
+  margin-top: 6rem;
+}
 .question {
   background-color: white;
   width: 50%;
@@ -42,8 +45,6 @@ body {
   line-height: 1.5;
   font-size: 0.92rem;
   font-family: 'Open Sans', sans-serif;
-}
-.show-box {
   display: none;
 }
 .question-btn {
@@ -60,8 +61,22 @@ body {
   text-align: center;
   color: #c59e68;
   font-family: 'Great Vibes', cursive;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   letter-spacing: 0.3rem;
+  margin-bottom: 3.5rem;
+}
+
+.show-text .question-text {
+  display: block;
+}
+.minus-icon {
+  display: none;
+}
+.show-text .minus-icon {
+  display: inline;
+}
+.show-text .plus-icon {
+  display: none;
 }
 @media only screen and (max-width: 676px) {
   .question {
