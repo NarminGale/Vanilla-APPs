@@ -27,8 +27,13 @@ const deadline = document.querySelector('.deadline')
 const items = document.querySelectorAll('.deadline-format h4')
 
 // year month date hours minutes seconds
-const futureDate = new Date(2021, 12, 11, 10, 30, 0)
+const tempDate = new Date()
+const tempYear = tempDate.getFullYear()
+const tempMonth = tempDate.getMonth()
+const tempDay = tempDate.getDate()
 
+// const futureDate = new Date(2021, 12, 11, 10, 30, 0)
+const futureDate = new Date(tempYear, tempMonth, tempDay + 10, 1, 30, 0)
 const year = futureDate.getFullYear()
 const date = futureDate.getDate()
 const hours = futureDate.getHours()
@@ -76,3 +81,4 @@ function getTime() {
   }
 }
 const updateTime = setInterval(getTime, 1000)
+getTime()
