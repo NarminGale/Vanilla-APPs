@@ -1,0 +1,62 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Set height to 100% for body and html to enable the background image to cover the whole page: */
+
+
+.bgimg {
+  /* Background image */
+  background-image: url('https://images.squarespace-cdn.com/content/v1/578ea3a92994ca6eb427c480/1472672356352-RC8WW7FZLYCJACZWUU4N/ke17ZwdGBToddI8pDm48kFyD7pzB8zoMIVY5aiUuFlp7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0jG2lbcDYBOeMi4OFSYem8DMb5PTLoEDdB05UqhYu-xbnSznFxIRsaAU-3g5IaylIg/vegetables-background-000046272610_full1.jpg?format=1500w');
+  /* Full-screen */
+  height: 100%;
+  /* Center the background image */
+  background-position: center;
+  /* Scale and zoom in the image */
+  background-size: cover;
+  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+  position: relative;
+  /* Add a white text color to all elements inside the .bgimg container */
+  color: white;
+  /* Add a font */
+  font-family: 'Courier New', Courier, monospace;
+  /* Set the font-size to 25 pixels */
+  font-size: 2rem;
+  z-index: 1;
+}
+.bgimg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.205);
+  z-index: -1;
+}
+
+/* Position text in the top-left corner */
+.nav {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.8rem;
+}
+  
+  /* Position text in the middle */
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+  
+  /* Style the <hr> element */
+hr {
+    margin: auto;
+    width: 40%;
+    margin: 1rem auto;
+}
