@@ -137,15 +137,11 @@ nav {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 .fixed-nav .links a {
-  color: white;
-}
-.ficed-nav .links a:hover {
   color: rgb(196, 136, 26);
 }
-
-/* .fixed-nav .links-container {
-  height: auto !important;
-} */
+.ficed-nav .links a:hover {
+  color: rgb(236, 187, 96);
+}
 
 /* fixed nav ends */
 
@@ -300,8 +296,8 @@ footer p {
   place-items: center;
   border-radius: 50%;
   color: white;
-  /* visibility: hidden; */
-  /* z-index: -100; */
+  visibility: hidden;
+  z-index: -100;
 }
 .show-link {
   visibility: visible;
