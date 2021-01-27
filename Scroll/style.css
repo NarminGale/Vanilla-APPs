@@ -124,7 +124,7 @@ main {
 /*Scroll*/
 /* navbar */
 nav {
-  background: var(--clr-white);
+  background: white;
   padding: 1rem 1.5rem;
 }
 /* fixed nav */
@@ -133,18 +133,22 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--clr-white);
-  box-shadow: var(--light-shadow);
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 .fixed-nav .links a {
-  color: var(--clr-grey-1);
+  color: white;
 }
-.fixed-nav .links a:hover {
-  color: var(--clr-secondary);
+.ficed-nav .links a:hover {
+  color: rgb(196, 136, 26);
 }
+
 /* .fixed-nav .links-container {
   height: auto !important;
 } */
+
+/* fixed nav ends */
+
 .nav-header {
   display: flex;
   align-items: center;
@@ -152,14 +156,14 @@ nav {
 }
 .nav-toggle {
   font-size: 1.5rem;
-  color: var(--clr-grey-1);
+  color: rgb(196, 136, 26);
   background: transparent;
   border-color: transparent;
-  transition: var(--transition);
+  transition: all 0.3s linear;
   cursor: pointer;
 }
 .nav-toggle:hover {
-  color: var(--clr-secondary);
+  color: rgb(240, 199, 122);
 }
 .logo {
   height: 50px;
@@ -167,24 +171,24 @@ nav {
 .links-container {
   height: 0;
   overflow: hidden;
-  transition: var(--transition);
+  transition: all 0.3s linear;
 }
 .show-links {
   height: 200px;
 }
 .links a {
-  background: var(--clr-white);
-  color: var(--clr-grey-5);
+  background: white;
+  color: rgb(196, 136, 26);
   font-size: 1.1rem;
   text-transform: capitalize;
-  letter-spacing: var(--spacing);
+  letter-spacing: 0.3rem;
   display: block;
-  transition: var(--transition);
+  transition: all 0.3s linear;
   font-weight: bold;
   padding: 0.75rem 0;
 }
 .links a:hover {
-  color: var(--clr-grey-1);
+  color: rgb(196, 136, 26);
 }
 @media screen and (min-width: 800px) {
   nav {
@@ -212,20 +216,21 @@ nav {
   }
   .links a {
     background: transparent;
-    color: var(--clr-white);
+    color: white;
     font-size: 1.1rem;
     text-transform: capitalize;
-    letter-spacing: var(--spacing);
+    letter-spacing: 0.2rem;
     display: block;
-    transition: var(--transition);
+    transition: all 0.2s linear;
     margin: 0 1rem;
     font-weight: bold;
     padding: 0;
   }
   .links a:hover {
-    color: var(--clr-white);
+    color: rgb(245, 188, 82);
   }
 }
+/*  */
 /* hero */
 header {
   min-height: 100vh;
@@ -271,8 +276,8 @@ header {
   background: rgb(240, 220, 182);
 }
 footer {
-  background: rgb(124, 83, 5);
-  padding: 4rem 1rem;
+  background: rgb(107, 71, 4);
+  padding: 3rem 1rem;
 }
 footer p {
   color: white;
