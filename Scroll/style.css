@@ -161,9 +161,10 @@ nav {
   border-color: transparent;
   transition: all 0.3s linear;
   cursor: pointer;
+  outline: none;
 }
 .nav-toggle:hover {
-  color: rgb(240, 199, 122);
+  color: rgb(240, 199, 113);
 }
 .logo {
   height: 50px;
@@ -188,7 +189,7 @@ nav {
   padding: 0.75rem 0;
 }
 .links a:hover {
-  color: rgb(196, 136, 26);
+  color: rgb(241, 197, 113);
 }
 @media screen and (min-width: 800px) {
   nav {
@@ -292,30 +293,17 @@ footer p {
   position: fixed;
   bottom: 3rem;
   right: 3rem;
-  background: black;
-  width: 2rem;
-  height: 2rem;
+  background: rgb(196, 136, 26);
+  width: 2.5rem;
+  height: 2.5rem;
   display: grid;
   place-items: center;
-  border-radius: var(--radius);
-  color: var(--clr-white);
-  animation: bounce 2s ease-in-out infinite;
-  visibility: hidden;
-  z-index: -100;
+  border-radius: 50%;
+  color: white;
+  /* visibility: hidden; */
+  /* z-index: -100; */
 }
 .show-link {
   visibility: visible;
   z-index: 100;
-}
-
-@keyframes bounce {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
