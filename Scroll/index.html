@@ -7,19 +7,72 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="bgimg">
-      <div class="nav">
-        <p>Logo</p>
+    <!-- header -->
+    <header id="home">
+      <!-- navbar -->
+      <nav id="nav">
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+            <img src="" alt="" class="logo" />
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <!-- links -->
+          <div class="link-container">
+            <ul class="links">
+              <li><a href="#home" class="scroll-link">Home</a></li>
+              <li><a href="#about" class="scroll-link">about</a></li>
+              <li><a href="#services" class="scroll-link">services</a></li>
+              <li><a href="#tours" class="scroll-link">tours</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- banner -->
+      <div class="banner">
+        <div class="container">
+          <h1>scrolll project</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+            aspernatur ex, necessitatibus adipisci dolorum molestiae hic
+            explicabo sit nesciunt sunt!
+          </p>
+          <li><a href="#tours" class="scroll-link btn">tours</a></li>
+        </div>
       </div>
-      <div class="middle">
-        <h1>Scroll Project</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
-          obcaecati?
-        </p>
-        <button>Explore Tours</button>
+    </header>
+    <!-- about -->
+    <section class="section" id="about">
+      <div class="title">
+        <h2>About <span>us</span></h2>
       </div>
-    </div>
+    </section>
+    <!-- services -->
+    <section class="section" id="services">
+      <div class="title">
+        <h2>About <span>services</span></h2>
+      </div>
+    </section>
+    <!-- tours -->
+    <section class="section" id="tours">
+      <div class="title">
+        <h2>About <span>tours</span></h2>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="section">
+      <p>
+        copyright &copy; backroads trave tours company
+        <span id="date">2021</span>.all rights reserved
+      </p>
+    </footer>
+    <!-- back to top button -->
+    <a href="#home" class="scroll-link top-link">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+    <!-- javascript -->
     <script src="script.js"></script>
   </body>
 </html>
