@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  padding: 1rem 2rem;
+}
+
+.grocery-form .alert {
+  border: 1px solid black;
+  margin: 0 0 0.5rem;
+  padding: 0.1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.2rem;
+  /* visibility: hidden; */
+}
+.grocery-form h4 {
+  margin: 0.8rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: row nowrap;
+  margin-bottom: 2rem;
+}
+.form-control button {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+.form-control input {
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.3rem;
+  border: none;
+  background-color: rgb(236, 167, 118);
+}
+.grocery-container {
+  display: flex;
+  flex-direction: column;
+}
+.grocery-container button {
+  border: none;
+  margin: 0.5rem 0;
+  background: none;
+  letter-spacing: 0.15rem;
+  cursor: pointer;
+}
+
+.grocery-container button:hover {
+  color: rgb(165, 39, 39);
+}
+.grocery-list .grocery-item {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.8rem;
+}
+.grocery-list .grocery-item:hover {
+  background-color: rgb(245, 213, 201);
+}
+.grocery-list .grocery-item .title {
+  padding: 0.5rem 0;
+}
+.btn-container .edit-btn {
+  color: darkgreen;
+}
+.btn-container .delete-btn {
+  color: darkred;
+}
+.grocery-form .danger {
+  background-color: rgb(207, 95, 95);
+}
+.grocery-form .success {
+  background-color: rgb(51, 155, 112);
+}
