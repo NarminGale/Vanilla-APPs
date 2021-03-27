@@ -4,21 +4,73 @@
   left: 0;
   width: 100%;
   height: 100%;
-  transition: var(--transition);
-  background-color: pink;
+  transition: all 0.3s linear;
+  background-color: rebeccapurple;
   transform: translate(-100%);
 }
 .sidebar-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.sidebar-header p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #e4dc75;
+  letter-spacing: 0.1rem;
 }
 .show-sidebar {
   transform: translate(0);
+}
+.close-button {
+  font-size: 1.3rem;
+  outline: none;
+  border: transparent;
+  color: rgb(199, 46, 46);
+  background: transparent;
+  cursor: pointer;
+}
+.close-button:hover {
+  color: #e4dc75;
 }
 .sidebar-toggle {
   position: fixed;
   top: 0;
   right: 0;
+  font-size: 2rem;
+  border: transparent;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  padding: 0.5rem 1rem;
+  background: rebeccapurple;
+  transition: all 0.2s linear;
+}
+.sidebar-toggle:hover {
+  color: #e4dc75;
+}
+.links {
+  padding-left: 0;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.links li {
+  list-style: none;
+  font-size: 1.25rem;
+  padding: 0.3rem 0;
+  transition: all 0.3s linear;
+}
+.links li:hover {
+  background: rgba(255, 255, 255, 0.25);
+  padding-left: 1rem;
+}
+.links li a {
+  text-decoration: none;
+  color: white;
+  letter-spacing: 0.03rem;
 }
 @media screen and (min-width: 676px) {
   .sidebar {
