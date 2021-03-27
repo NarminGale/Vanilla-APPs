@@ -1,15 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.nav-center {
+  background: rebeccapurple;
+}
 .nav-header {
+  margin: 0 auto;
+  max-width: 80vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
-  background-color: gray;
+  padding: 0.5rem 1rem;
+}
+.nav-header p {
+  letter-spacing: 0.1rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.nav-header .nav-toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  transition: all 0.3s linear;
+}
+.nav-header .nav-toggle:hover {
+  color: wheat;
 }
 .links {
+  margin: 0 auto;
+  max-width: 80vw;
   height: 0;
+  padding-left: 0;
   overflow: hidden;
-  transition: var(--transition);
+  transition: all 0.3s linear;
+}
+ul li {
+  padding: 0.7rem 0;
+  font-size: 1.15rem;
+  list-style: none;
+  transition: all 0.3s linear;
+}
+ul li:hover {
+  background: rgba(0, 0, 0, 0.2);
+  padding-left: 1rem;
+}
+ul li a {
+  letter-spacing: 0.1rem;
+  color: white;
+  text-decoration: none;
 }
 .show-links {
-  height: 10rem;
+  height: 11rem;
 }
