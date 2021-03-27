@@ -189,13 +189,15 @@ About
   margin: 0 auto;
 }
 
-.about-img {
+.about-image {
   margin-bottom: 2rem;
+  height: 20rem;
 }
-.about-img img {
+.about-image img {
   border-radius: var(--radius);
   object-fit: cover;
-  height: 20rem;
+  height: 100%;
+  width: 100%;
 }
 @media screen and (min-width: 992px) {
   .about-img {
