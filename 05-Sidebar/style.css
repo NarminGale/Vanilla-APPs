@@ -32,6 +32,7 @@
   color: rgb(199, 46, 46);
   background: transparent;
   cursor: pointer;
+  transition: all 0.2s linear;
 }
 .close-button:hover {
   color: #e4dc75;
