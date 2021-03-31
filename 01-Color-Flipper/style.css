@@ -19,6 +19,9 @@ body {
   font-weight: bold;
   letter-spacing: 0.1rem;
 }
+.color {
+  transition: all 0.3s linear;
+}
 .btn {
   border: 0.15rem solid black;
   border-radius: 0.5rem;
@@ -30,4 +33,9 @@ body {
   letter-spacing: 0.2rem;
   font-weight: bold;
   background: transparent;
+  transition: all 0.3s linear;
+}
+.btn:hover {
+  color: white;
+  background: black;
 }
