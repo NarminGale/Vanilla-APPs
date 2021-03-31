@@ -3,25 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  width: 100vw;
-  height: 100vh;
-  background: url('./back-img.jpg') no-repeat center/cover;
   font-family: Arial, Helvetica, sans-serif;
   z-index: 1;
   position: relative;
 }
+
+.hero {
+  min-height: 100vh;
+  background: url('./back-img.jpg') no-repeat center/cover;
+  display: grid;
+  place-items: center;
+}
 .banner {
   background-color: rgb(255, 238, 217);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
-  padding: 4rem 5rem;
+  padding: 4rem 0;
   border-radius: 0.8rem;
   color: #192a42;
-  position: absolute;
+  width: 90vw;
+  max-width: 620px;
 }
 .banner h1 {
   padding: 0 0 2.5rem 0;
@@ -48,25 +49,27 @@ body {
 .modal-overlay {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  display: grid;
+  place-items: center;
+  transition: all 0.3s linear;
   background: rgba(83, 78, 68, 0.699);
   visibility: hidden;
   z-index: -10;
 }
 .modal-container {
   background-color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 30%;
-  width: 48%;
+  width: 90vw;
+  height: 30vh;
+  max-width: 620px;
   text-align: center;
+  display: grid;
+  place-items: center;
+  position: relative;
   border-radius: 0.8rem;
   color: #192a42;
-  padding: 3rem;
 }
 .modal-container h3 {
   font-size: 1.5rem;
@@ -90,8 +93,8 @@ body {
   color: #f0481d;
 }
 
-@media only screen and (max-width: 676px) {
-  .banner {
-    width: 85%;
+@media only screen and (max-width: 800px) {
+  .banner h1 {
+    font-size: 3rem;
   }
 }
