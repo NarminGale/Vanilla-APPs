@@ -5,27 +5,28 @@
 }
 
 body {
-  background-image: url('https://design-milk.com/images/2020/03/DM-Wallpaper-2004-2560x1440-1.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  background: url('./back-img.jpg') no-repeat center/cover;
   font-family: Arial, Helvetica, sans-serif;
   z-index: 1;
+  position: relative;
 }
 .banner {
   background-color: rgb(255, 238, 217);
-  width: 50%;
-  height: 15rem;
-  margin: 12rem auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
+  padding: 4rem 5rem;
   border-radius: 0.8rem;
   color: #192a42;
-  position: relative;
+  position: absolute;
 }
 .banner h1 {
-  padding: 3rem 0;
-  font-size: 3rem;
-  letter-spacing: 0.3rem;
+  padding: 0 0 2.5rem 0;
+  font-size: 4rem;
+  letter-spacing: 0.25rem;
 }
 .modal-button {
   font-size: 0.9rem;
@@ -37,49 +38,56 @@ body {
   background-color: #b6492e;
   color: wheat;
   cursor: pointer;
-}
-.modal-button:focus {
   outline: none;
 }
 .modal-button:hover {
   background: none;
   color: #b6492e;
-  transition: 400ms linear all;
+  transition: all 400ms linear;
 }
 .modal-overlay {
-  background-color: red;
-  position: absolute;
-  height: auto;
-  min-height: 500px;
   width: 100%;
-  text-align: center;
-  border-radius: 0.8rem;
-  color: #192a42;
-  transition: var(--transition);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(83, 78, 68, 0.699);
   visibility: hidden;
   z-index: -10;
 }
-.modal-overlay h3 {
-  padding: 4rem;
-  font-size: 1.2rem;
+.modal-container {
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 30%;
+  width: 48%;
+  text-align: center;
+  border-radius: 0.8rem;
+  color: #192a42;
+  padding: 3rem;
+}
+.modal-container h3 {
+  font-size: 1.5rem;
   letter-spacing: 0.2rem;
+  text-transform: capitalize;
 }
 .close-btn {
   position: absolute;
   top: 1rem;
-  right: 1rem;
+  right: 1.2rem;
   background: none;
   border: none;
   font-size: 1.8rem;
-  color: #8a3620;
-  cursor: pointer;
-}
-.close-btn:focus {
+  color: #c53613;
   outline: none;
+  cursor: pointer;
+  transition: all 0.2s linear;
 }
 .close-btn:hover {
-  font-size: 2rem;
-  color: #8a3520a6;
+  transform: scale(1.2);
+  color: #f0481d;
 }
 
 @media only screen and (max-width: 676px) {
