@@ -49,6 +49,7 @@ let currItem = 0
 window.addEventListener('DOMContentLoaded', function () {
   showPerson(currItem)
 })
+
 nextBtn.addEventListener('click', function () {
   currItem++
   if (currItem > people.length - 1) {
@@ -62,6 +63,10 @@ prevBtn.addEventListener('click', function () {
     currItem = people.length - 1
   }
   showPerson(currItem)
+})
+randBtn.addEventListener('click', function () {
+  const randomNumber = Math.floor(Math.random() * people.length)
+  showPerson(randomNumber)
 })
 function showPerson(e) {
   const item = people[e]
