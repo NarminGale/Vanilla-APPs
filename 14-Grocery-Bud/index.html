@@ -4,39 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grocery Bud</title>
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- normalize css -->
+    <link rel="stylesheet" href="./normalize.css" />
+
+    <!-- font awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
+    <!-- main css -->
+    <link rel="stylesheet" href="./main.css" />
   </head>
   <body>
-    <section class="container-center">
+    <section class="section-center">
       <!-- form -->
-      <form action="" method="GET" class="grocery-form">
-        <h4>Grocery Bud</h4>
+      <form class="grocery-form">
+        <p class="alert alert-danger">Please enter value</p>
+        <h4>grocery bud</h4>
         <div class="form-control">
-          <input type="text" id="grocery" placeholder="e.g. eggs" />
-          <button type="submit" class="submit-btn" value=" ">Submit</button>
+          <input
+            type="text"
+            id="grocery"
+            class="form-input"
+            placeholder="e.g. eggs"
+          />
+          <button type="submit" class="btn submit-btn small-text">
+            submit
+          </button>
         </div>
       </form>
       <!-- list -->
       <div class="grocery-container">
+        <!-- list items -->
         <div class="grocery-list">
-          <!-- <article class="grocery-item">
-            <p class="title">item</p>
+          <!-- gorcery item -->
+          <article class="grocery-item">
+            <span class="title">apples</span>
             <div class="btn-container">
+              <!-- edit btn -->
               <button type="button" class="edit-btn">
                 <i class="fas fa-edit"></i>
               </button>
+              <!-- delete btn -->
               <button type="button" class="delete-btn">
                 <i class="fas fa-trash"></i>
               </button>
             </div>
-          </article> -->
+          </article>
+          <!-- end gorcery item -->
+
+          <!-- gorcery item -->
+          <article class="grocery-item">
+            <span class="title">oranges</span>
+            <div class="btn-container">
+              <!-- edit btn -->
+              <button type="button" class="edit-btn">
+                <i class="fas fa-edit"></i>
+              </button>
+              <!-- delete btn -->
+              <button type="button" class="delete-btn">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </article>
+          <!-- end gorcery item -->
         </div>
-        <!-- button -->
-        <button type="button" class="clear-btn">Clear items</button>
+
+        <!-- clear button -->
+        <button type="button" class="clear-btn text-small">clear items</button>
       </div>
     </section>
 
