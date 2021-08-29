@@ -54,6 +54,11 @@ form.addEventListener('submit', function (e) {
     // set back to default
     setBackToDefault()
   } else if (value && editFlag) {
+    editElement.innerHTML = value
+    displayAlert('value changed', 'success')
+    // edit local storage
+    editLocalStorage(id, value)
+    setBackToDefault()
   } else {
     displayAlert('please enter value', 'danger')
   }
@@ -110,13 +115,26 @@ function deleteItem(e) {
   // remove from local storage
   removeFromLocalStorage()
 }
+
 // edit function
-function editItem() {}
+function editItem(e) {
+  const element = e.currentTarget.parentElement.parentElement
+  // set edit item
+  editElement = e.currentTarget.parentElement.previousElementSibling
+  // set form value
+  grocery.value = editElement.innerHTML
+  editFlag = true
+  editID = element.dataset.id
+
+  submitBtn.textContent = 'edit'
+}
 
 // set back to default
 function addToLocalStorage(id, value) {}
 
 function removeFromLocalStorage(id) {}
+
+function editLocalStorage(id, value) {}
 
 // clearBtn.addEventListener('click', function () {
 //   listItems.splice(0, listItems.length)
