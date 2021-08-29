@@ -300,6 +300,12 @@ ul {
 
 .grocery-container {
   margin-top: 2rem;
+  transition: var(--transition);
+  visibility: hidden;
+}
+
+.show-container {
+  visibility: visible;
 }
 
 .grocery-item {
