@@ -6,8 +6,6 @@ const submitBtn = document.querySelector('.submit-btn')
 const container = document.querySelector('.grocery-container')
 const list = document.querySelector('.grocery-list') //
 const clearBtn = document.querySelector('.clear-btn')
-const editBtn = document.querySelectorAll('.edit-btn')
-const deleteBtn = document.querySelectorAll('.delete-btn')
 
 // edit option
 let editElement
@@ -38,6 +36,13 @@ form.addEventListener('submit', function (e) {
                 <i class="fas fa-trash"></i>
               </button>
             </div>`
+
+    const editBtn = document.querySelectorAll('.edit-btn')
+    const deleteBtn = document.querySelectorAll('.delete-btn')
+
+    deleteBtn.addEventListener('click', deleteItem)
+    editBtn.addEventListener('click', editItem)
+
     //append child
     list.appendChild(element)
     // display alert
@@ -92,6 +97,11 @@ function setBackToDefault() {
 
 // set back to default
 function addToLocalStorage(id, value) {}
+
+// delete function
+function deleteItem() {}
+// edit function
+function editItem() {}
 
 // clearBtn.addEventListener('click', function () {
 //   listItems.splice(0, listItems.length)
