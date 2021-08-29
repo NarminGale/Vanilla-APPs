@@ -37,8 +37,8 @@ form.addEventListener('submit', function (e) {
               </button>
             </div>`
 
-    const editBtn = document.querySelectorAll('.edit-btn')
-    const deleteBtn = document.querySelectorAll('.delete-btn')
+    const deleteBtn = element.querySelector('.delete-btn')
+    const editBtn = element.querySelector('.edit-btn')
 
     deleteBtn.addEventListener('click', deleteItem)
     editBtn.addEventListener('click', editItem)
@@ -95,13 +95,28 @@ function setBackToDefault() {
   submitBtn.textContent = 'submit'
 }
 
+// delete function
+function deleteItem(e) {
+  const element = e.currentTarget.parentElement.parentElement
+  const id = element.dataset.id
+  list.removeChild(element)
+  console.log(list.children)
+  if (list.children.length === 0) {
+    container.classList.remove('show-container')
+  }
+
+  displayAlert('item removed', 'danger')
+  setBackToDefault()
+  // remove from local storage
+  removeFromLocalStorage()
+}
+// edit function
+function editItem() {}
+
 // set back to default
 function addToLocalStorage(id, value) {}
 
-// delete function
-function deleteItem() {}
-// edit function
-function editItem() {}
+function removeFromLocalStorage(id) {}
 
 // clearBtn.addEventListener('click', function () {
 //   listItems.splice(0, listItems.length)
