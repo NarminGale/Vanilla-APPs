@@ -18,33 +18,7 @@ form.addEventListener('submit', function (e) {
   const value = grocery.value
   const id = new Date().getTime().toString()
   if (value && !editFlag) {
-    const element = document.createElement('article')
-    // add class
-    element.classList.add('grocery-item')
-    // add id
-    const attr = document.createAttribute('data-id')
-    attr.value = id
-    element.setAttributeNode(attr)
-    element.innerHTML = `<span class="title">${value}</span>
-            <div class="btn-container">
-              <!-- edit btn -->
-              <button type="button" class="edit-btn">
-                <i class="fas fa-edit"></i>
-              </button>
-              <!-- delete btn -->
-              <button type="button" class="delete-btn">
-                <i class="fas fa-trash"></i>
-              </button>
-            </div>`
-
-    const deleteBtn = element.querySelector('.delete-btn')
-    const editBtn = element.querySelector('.edit-btn')
-
-    deleteBtn.addEventListener('click', deleteItem)
-    editBtn.addEventListener('click', editItem)
-
-    //append child
-    list.appendChild(element)
+    createListItem(id, value)
     // display alert
     displayAlert('item added to the list', 'success')
     // show container
@@ -63,6 +37,8 @@ form.addEventListener('submit', function (e) {
     displayAlert('please enter value', 'danger')
   }
 })
+
+window.addEventListener('DOMContentLoaded', setupItems)
 
 // clear items
 clearBtn.addEventListener('click', function () {
@@ -139,12 +115,6 @@ function addToLocalStorage(id, value) {
   localStorage.setItem('list', JSON.stringify(items))
 }
 
-function getLocalStorage() {
-  return localStorage.getItem('list')
-    ? JSON.parse(localStorage.getItem('list'))
-    : []
-}
-
 function removeFromLocalStorage(id) {
   let items = getLocalStorage()
 
@@ -153,6 +123,7 @@ function removeFromLocalStorage(id) {
       return item
     }
   })
+  localStorage.setItem('list', JSON.stringify(items))
 }
 
 function editLocalStorage(id, value) {
@@ -166,59 +137,49 @@ function editLocalStorage(id, value) {
   })
 }
 
-// clearBtn.addEventListener('click', function () {
-//   listItems.splice(0, listItems.length)
-//   groceryList.innerHTML = ''
-// })
+// setup Items
+function setupItems() {
+  let items = getLocalStorage()
+  if (items.length > 0) {
+    items.forEach(function (item) {
+      createListItem(item.id, item.value)
+    })
+    container.classList.add('show-container')
+  }
+}
 
-// groceryList.addEventListener('click', function (e) {
-//   if (e.target.className === 'fas fa-trash') {
-//     e.target.parentElement.parentElement.parentElement.remove()
-//   }
-//   if (e.target.className === 'fas fa-edit') {
-//     const vallu = e.target.parentElement.parentElement.parentElement.innerText
-//     input.value = vallu
-//   }
-// })
+function getLocalStorage() {
+  return localStorage.getItem('list')
+    ? JSON.parse(localStorage.getItem('list'))
+    : []
+}
 
-// function addListItem(item) {
-//   const addItem = `<article class="grocery-item">
-//               <p class="title">${item}</p>
-//               <div class="btn-container">
-//                 <button type="button" class="edit-btn">
-//                   <i class="fas fa-edit"></i>
-//                 </button>
-//                 <button type="button" class="delete-btn">
-//                   <i class="fas fa-trash"></i>
-//                 </button>
-//               </div>
-//             </article>`
+function createListItem(id, value) {
+  const element = document.createElement('article')
+  // add class
+  element.classList.add('grocery-item')
+  // add id
+  const attr = document.createAttribute('data-id')
+  attr.value = id
+  element.setAttributeNode(attr)
+  element.innerHTML = `<span class="title">${value}</span>
+            <div class="btn-container">
+              <!-- edit btn -->
+              <button type="button" class="edit-btn">
+                <i class="fas fa-edit"></i>
+              </button>
+              <!-- delete btn -->
+              <button type="button" class="delete-btn">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>`
 
-//   groceryList.innerHTML += addItem
-//   input.value = ''
-// }
-// function getfromStorage() {
-//   let bud
-//   if (localStorage.getItem('bud') === null) {
-//     bud = []
-//   } else {
-//     bud = JSON.parse(localStorage.getItem('bud'))
-//   }
-//   return bud
-// }
-// function addListItemStorage(lI) {
-//   let bud = getfromStorage()
-//   bud.push(lI)
-//   localStorage.setItem('bud', JSON.stringify(bud))
-// }
+  const deleteBtn = element.querySelector('.delete-btn')
+  const editBtn = element.querySelector('.edit-btn')
 
-// function showAlert(type, message) {
-//   const alert = document.createElement('p')
-//   alert.className = `alert ${type}`
-//   alert.textContent = message
-//   groceryForm.appendChild(alert)
+  deleteBtn.addEventListener('click', deleteItem)
+  editBtn.addEventListener('click', editItem)
 
-//   setTimeout(function () {
-//     alert.remove()
-//   }, 2000)
-// }
+  //append child
+  list.appendChild(element)
+}
